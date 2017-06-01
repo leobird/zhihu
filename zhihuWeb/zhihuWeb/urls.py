@@ -21,4 +21,5 @@ from zhihuWeb import view
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^zhihuQuestionTop/', view.zhihuQuestionTop),
+    url(r'^static/(?P.*)$','django.views.static.server',{'document_root':settings.STATIC_ROOT},name='static') 
 ]

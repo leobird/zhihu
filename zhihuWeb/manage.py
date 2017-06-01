@@ -20,3 +20,6 @@ if __name__ == "__main__":
             )
         raise
     execute_from_command_line(sys.argv)
+
+    reload = reload(sys)
+    sys.setdefaultencoding('gb18030')#否则加载css文件仍会出错
