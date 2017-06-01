@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
-from zhihuWeb import view
+import django
+from zhihuWeb import view, settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^zhihuQuestionTop/', view.zhihuQuestionTop),
-    url(r'^static/(?P.*)$','django.views.static.server',{'document_root':settings.STATIC_ROOT},name='static') 
+    url(r'^static/(?P<path>.*)$',django.views.static.serve,{'document_root':settings.STATIC_ROOT},name='static') 
 ]

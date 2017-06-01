@@ -1,6 +1,9 @@
 #!/usr/bin/env python
+# coding=utf-8
 import os
 import sys
+reload = reload(sys)
+sys.setdefaultencoding('gb18030')#否则加载css文件仍会出错
 
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "zhihuWeb.settings")
@@ -21,5 +24,4 @@ if __name__ == "__main__":
         raise
     execute_from_command_line(sys.argv)
 
-    reload = reload(sys)
-    sys.setdefaultencoding('gb18030')#否则加载css文件仍会出错
+

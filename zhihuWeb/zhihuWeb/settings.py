@@ -122,10 +122,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-z=os.path.dirname(file)
-x=os.path.dirname(os.path.dirname(file))
-y=os.path.join(os.path.dirname(os.path.dirname(file)),'static')
-STATIC_ROOT= os.path.join(os.path.dirname(os.path.dirname(file)),'static').replace('\\','/')
+STATIC_ROOT= os.path.join(os.path.dirname(os.path.dirname(__file__)),'zhihuWeb/static').replace('\\','/')
 
 STATIC_URL = '/static/'
 
